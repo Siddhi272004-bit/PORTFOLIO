@@ -1,0 +1,379 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Gilroy";
+}
+html,body {
+    height: 100%;
+    width:100%;
+}
+/* #main{
+    width:100%;
+    height:100%;
+    
+    position: relative;
+}
+#fs{
+    width:100%;
+    height:100%;
+    background-color: rgb(70, 65, 65);
+}
+#elem {
+    width:100%;
+    position: absolute;
+    bottom:0;
+    height:100px;
+    background-color: rgb(32, 161, 135);
+}
+#white {
+    width:100%;
+    height:0;
+    position: absolute;
+    bottom:0;
+    background-color: #dadada;
+} */
+ #main {
+    width:100%;
+
+ }
+ #loader {
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background-color: rgb(54, 51, 51);
+    color:#fff;
+ }
+ #loader #topheading {
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform:translate(-50%,0);
+ }
+ #topheadng h5{
+    text-align: center;
+    text-transform:uppercase;
+    font-size:11px;
+    font-weight:300;
+ }
+ #loader h1{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:4vw;
+    font-weight: 500;
+ }
+ #loader h1 span {
+    font-family:cursive;
+ }
+ .reveal h1 span
+{ 
+    display: block;
+}
+.reveal .parent{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    overflow-y:hidden;
+    /* hidden in y axis */
+}
+
+ #green {
+    position:absolute;
+    top:100%;
+    width:100%;
+    height:100vh;
+    background-color: rgb(78, 206, 193);
+ }
+ #home {
+    height:100%;
+    width:150vh;
+    /* since 'main' has 100% width */
+    background-color: #f0f0f0;
+ }
+ #home #nav {
+    position: relative;
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content:space-between;
+    padding:0 5vw;
+    align-items: center;
+ }
+ #nav a .line{
+    position: absolute;
+    /* as we can't implement width on span tag */
+    display: inline-block;
+    right:0;
+    left:0;
+    width:100%;
+    height:1px;
+
+    background-color: black;
+ }
+#line1{
+    left:0;
+    width:100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+}
+#line2{
+    right:0;
+    width:100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#nav a:hover #line2{
+    width:0%;
+}
+#nav a:hover #line1{
+    width:100%;
+}
+.row{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    color:#333;
+    padding:0 7vw;
+    line-height: 1;
+    padding-right: 12vw;
+}
+.row h1{
+    font-size:13vw;
+    font-weight: 500;
+}
+.row .text{
+    margin-top:0vw;
+}
+.row h5{
+    opacity:.6;
+    font-weight:11px;
+    font-weight: 500;
+}
+.row:nth-child(3){
+    margin-top:0;
+}
+.row svg{
+    height:150px;
+    margin:0 4vw;
+    
+}
+path,polyline{
+   stroke:#14cf93;
+}
+#imagery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20vw;
+    width:100%;
+    padding:7vw 7vw;
+    /* background-color: yellow; */
+}
+#imagery #imglef{
+    width:30%;
+    height:auto;
+    /* background-color: red; */
+}
+#imglef h1{
+    font-size:2.4vw;
+    font-weight:500;
+    letter-spacing: 1px;
+    color:#333;
+}
+#imglef h1 span{
+    color:#14CF93;
+    font-family:"Mazius Review 20.09";
+    font-weight:100;
+    font-style:italic;
+}
+#imgrig {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:300px;
+    width:60%;
+    /* background-color: yellow; */
+}
+#imgrig .imgcontnr {
+    /* top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position: absolute; */
+    position: absolute;
+    width:27vw;
+    height:40vw;
+    border-radius:1vw ;
+    filter:grayscale();
+    /* background-color: red; */
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    /* gets displayed as stack of cards */
+}
+#imgrig .imgcontnr:hover {
+    filter:grayscale(0);
+    /* from b&w to color */
+}
+#imgrig .imgcontnr:nth-child(1){
+    transform:translate(-40%,-8%) rotate(-10deg);
+    /* to tilt the parallax card */
+    background-image: url(.//photo-1546471180-335a013cb87b.avif);
+    background-size: cover;
+    background-position: center;
+}
+#imgrig .imgcontnr:nth-child(2){
+    transform:translate(-15%,0%) rotate(-15deg);
+    /* to tilt the parallax card */
+    background-image: url(.//photo-1568191009535-7d8b407d389a.avif);
+    background-size: cover;
+    background-position: center;
+}
+#imgrig .imgcontnr:nth-child(3){
+    transform:translate(20%,10%) rotate(-5deg);
+    /* to tilt the parallax card */
+    background-image: url(.//photo-1547241850-eb8a8754f95c.avif);
+    background-size: cover;
+    background-position: center;
+}
+#work{
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    padding-top:150px;
+    width:100%;
+    min-height:70vh;
+    background-color:#F2F2F2 ;
+}
+#work::before{
+    content:"";
+    top:-75px;
+    width:100%;
+    height:150px;
+    position: absolute;
+    transition: rotate(-180deg);
+    background-image: url();
+    background-size: cover;
+}
+#work .workrow{
+    padding: 0 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workrow h1{
+    display: flex;
+    align-items: baseline;
+    
+    font-size: 8vw;
+    font-weight: 600;
+}
+.workrow h1 .mini{
+    margin-left:5vw;
+    font-size: 2vw;
+    font-weight: 500;
+}
+.o-ui-arrow{
+    width: 5vw;
+    transform:rotate(90deg);
+}
+.o-ui-arrow path{
+    stroke:rgba(158,158,158);
+    
+}
+#images {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top:6vw;
+    position: relative;
+    width: 100%;
+}
+.cnt{
+    width:55%;
+    overflow:hidden;
+    border-radius: 50px;
+    padding:0 5vw;
+}
+.cnt img{
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    width:105%;
+    /* will exceed the width of the container */
+}
+.cnt1 {
+    width:55%;
+}
+.cnt2 {
+    width:28%;
+}
+#cursor{
+    position: fixed;
+    width:27vw;
+    top:0;
+    left:0;
+    z-index:999999;
+}
+#cursor>div{
+    pointer-events:none;
+    /* no effects of mouse on this */
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    opacity: 0;
+    position: relative;
+}
+#elem{
+    width:100%;
+    position: relative;
+}
+#cursor .crow{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    width:100%;
+    padding:.7vw;
+}
+
+.crow .ccircle{
+    width:2vw;
+    height:2vw;
+    border:2px solid #fff;
+    border-radius: 50%;
+}
+.crow .ccapsule{
+    padding:.7vw 3vw;
+    border-radius:100px;
+    background-color: #fff;
+}
+#elem img{
+    width:100%;
+    opacity: 0;
+    animation: an 4s linear infinite;
+    position: absolute;
+    /* the pics get positioned above one another */
+}
+#elem img:nth-child(2){
+    animation-delay: 1s;
+    /* giving the animation of the 2nd image a delay of 2s to run after the first one's */
+}
+#elem img:nth-child(3){
+    animation-delay: 2s;
+}
+@keyframes an{
+    0% {
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    /* images rapidly changing */
+    /* every image visible only till 20% of its time */
+    21%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity:0;
+    }
+}
